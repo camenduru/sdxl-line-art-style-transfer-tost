@@ -25,8 +25,8 @@ USER camenduru
 
 RUN pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 torchtext==0.18.0 torchdata==0.8.0 --extra-index-url https://download.pytorch.org/whl/cu124 && \
     pip install xformers==0.0.28.post3 && \
-    pip install opencv-python imageio imageio-ffmpeg ffmpeg-python av runpod && \
-    pip install torchsde einops diffusers transformers accelerate peft timm kornia scikit-image matplotlib blend_modes && \
+    pip install opencv-contrib-python imageio imageio-ffmpeg ffmpeg-python av runpod && \
+    pip install torchsde einops diffusers transformers accelerate peft timm kornia scikit-image matplotlib blend-modes segment-anything spandrel wget pydantic aiohttp && \
     git clone https://github.com/comfyanonymous/ComfyUI /content/ComfyUI && \
     git clone https://github.com/ltdrdata/ComfyUI-Manager /content/ComfyUI/custom_nodes/ComfyUI-Manager && \
     git clone https://github.com/sipherxyz/comfyui-art-venture /content/ComfyUI/custom_nodes/comfyui-art-venture && \
@@ -34,6 +34,7 @@ RUN pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+c
     git clone https://github.com/cubiq/ComfyUI_essentials /content/ComfyUI/custom_nodes/ComfyUI_essentials && \
     git clone https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet /content/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet && \
     git clone -b dev https://github.com/camenduru/ComfyUI_SLK_joy_caption_two /content/ComfyUI/custom_nodes/ComfyUI_SLK_joy_caption_two && \
+    git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus /content/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/misri/leosamsHelloworldXL_helloworldXL70/resolve/main/leosamsHelloworldXL_helloworldXL70.safetensors -d /content/ComfyUI/models/checkpoints/sdxl -o leosamsHelloworldXL_helloworldXL70.safetensors && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/alvdansen/midsommarcartoon/resolve/main/araminta_k_midsommar_cartoon.safetensors -d /content/ComfyUI/models/loras/sdxl -o araminta_k_midsommar_cartoon.safetensors && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/4spaces/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.fp16.safetensors -d /content/ComfyUI/models/controlnet/sdxl -o controlnet-union-sdxl-1.0-promax.safetensors && \
