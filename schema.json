@@ -1,0 +1,511 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "title": "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+      "author": "Hu Ye, Jun Zhang, Sibo Liu, Xiao Han, Wei Yang",
+      "page": "https://ip-adapter.github.io/",
+      "code": "https://github.com/tencent-ailab/IP-Adapter",
+      "paper": "https://arxiv.org/abs/2308.06721",
+      "jupyter": "https://github.com/camenduru/IPAdapter-jupyter",
+      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/sdxl-line-art-style-transfer.ipynb",
+      "tags": [
+        "Text to Image"
+      ],
+      "widget": "readme"
+    },
+    "enable_image_caption": {
+      "type": "boolean",
+      "description": "Enable Image Caption"
+    },
+    "upload": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "input_image",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "input_image": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "upload1": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "style_imag1",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "style_imag1": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "upload2": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "style_imag2",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "style_imag2": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "upload3": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "style_imag3",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "style_imag3": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "upload4": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "style_imag4",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "style_imag4": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "caption_type": {
+      "type": "string",
+      "widget": "select",
+      "description": "Caption Type",
+      "oneOf": [
+        {
+          "description": "Descriptive",
+          "enum": [
+            "Descriptive"
+          ]
+        },
+        {
+          "description": "Descriptive (Informal)",
+          "enum": [
+            "Descriptive (Informal)"
+          ]
+        },
+        {
+          "description": "Training Prompt",
+          "enum": [
+            "Training Prompt"
+          ]
+        },
+        {
+          "description": "MidJourney",
+          "enum": [
+            "MidJourney"
+          ]
+        },
+        {
+          "description": "Booru tag list",
+          "enum": [
+            "Booru tag list"
+          ]
+        },
+        {
+          "description": "Booru-like tag list",
+          "enum": [
+            "Booru-like tag list"
+          ]
+        },
+        {
+          "description": "Art Critic",
+          "enum": [
+            "Art Critic"
+          ]
+        },
+        {
+          "description": "Product Listing",
+          "enum": [
+            "Product Listing"
+          ]
+        },
+        {
+          "description": "Social Media Post",
+          "enum": [
+            "Social Media Post"
+          ]
+        }
+      ],
+      "default": "Descriptive",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "caption_length": {
+      "type": "string",
+      "widget": "select",
+      "description": "Caption Length",
+      "oneOf": [
+        {
+          "description": "any",
+          "enum": [
+            "any"
+          ]
+        },
+        {
+          "description": "very short",
+          "enum": [
+            "very short"
+          ]
+        },
+        {
+          "description": "short",
+          "enum": [
+            "short"
+          ]
+        },
+        {
+          "description": "medium-length",
+          "enum": [
+            "medium-length"
+          ]
+        },
+        {
+          "description": "long",
+          "enum": [
+            "long"
+          ]
+        },
+        {
+          "description": "very long",
+          "enum": [
+            "very long"
+          ]
+        }
+      ],
+      "default": "long",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "low_vram": {
+      "type": "boolean",
+      "description": "Low VRAM",
+      "widget": "hidden"
+    },
+    "positive_prompt": {
+      "type": "string",
+      "description": "Positive Prompt",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          false
+        ]
+      }
+    },
+    "negative_prompt": {
+      "type": "string",
+      "description": "Negative Prompt",
+      "widget": "textarea"
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Seed (if 0 random)"
+    },
+    "steps": {
+      "type": "integer",
+      "widget": "select",
+      "description": "Steps",
+      "oneOf": [
+        {
+          "description": "20",
+          "enum": [
+            20
+          ]
+        },
+        {
+          "description": "40",
+          "enum": [
+            40
+          ]
+        },
+        {
+          "description": "50",
+          "enum": [
+            50
+          ]
+        }
+      ],
+      "default": 20
+    },
+    "cfg": {
+      "type": "number",
+      "description": "CFG"
+    },
+    "sampler_name": {
+      "type": "string",
+      "widget": "select",
+      "description": "Sampler Name",
+      "oneOf": [
+        {
+          "description": "euler",
+          "enum": [
+            "euler"
+          ]
+        },
+        {
+          "description": "euler_ancestral",
+          "enum": [
+            "euler_ancestral"
+          ]
+        },
+        {
+          "description": "heun",
+          "enum": [
+            "heun"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "dpm_2",
+          "enum": [
+            "dpm_2"
+          ]
+        },
+        {
+          "description": "dpm_2_ancestral",
+          "enum": [
+            "dpm_2_ancestral"
+          ]
+        },
+        {
+          "description": "lms",
+          "enum": [
+            "lms"
+          ]
+        },
+        {
+          "description": "dpm_fast",
+          "enum": [
+            "dpm_fast"
+          ]
+        },
+        {
+          "description": "dpm_adaptive",
+          "enum": [
+            "dpm_adaptive"
+          ]
+        },
+        {
+          "description": "dpmpp_2s_ancestral",
+          "enum": [
+            "dpmpp_2s_ancestral"
+          ]
+        },
+        {
+          "description": "dpmpp_sde",
+          "enum": [
+            "dpmpp_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_sde_gpu",
+          "enum": [
+            "dpmpp_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_2m",
+          "enum": [
+            "dpmpp_2m"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde",
+          "enum": [
+            "dpmpp_2m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_2m_sde_gpu",
+          "enum": [
+            "dpmpp_2m_sde_gpu"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde",
+          "enum": [
+            "dpmpp_3m_sde"
+          ]
+        },
+        {
+          "description": "dpmpp_3m_sde_gpu",
+          "enum": [
+            "dpmpp_3m_sde_gpu"
+          ]
+        },
+        {
+          "description": "ddpm",
+          "enum": [
+            "ddpm"
+          ]
+        },
+        {
+          "description": "lcm",
+          "enum": [
+            "lcm"
+          ]
+        },
+        {
+          "description": "ddim",
+          "enum": [
+            "ddim"
+          ]
+        },
+        {
+          "description": "uni_pc",
+          "enum": [
+            "uni_pc"
+          ]
+        },
+        {
+          "description": "uni_pc_bh2",
+          "enum": [
+            "uni_pc_bh2"
+          ]
+        }
+      ],
+      "default": "dpmpp_2m"
+    },
+    "scheduler": {
+      "type": "string",
+      "widget": "select",
+      "description": "Scheduler",
+      "oneOf": [
+        {
+          "description": "normal",
+          "enum": [
+            "normal"
+          ]
+        },
+        {
+          "description": "karras",
+          "enum": [
+            "karras"
+          ]
+        },
+        {
+          "description": "exponential",
+          "enum": [
+            "exponential"
+          ]
+        },
+        {
+          "description": "heunpp2",
+          "enum": [
+            "heunpp2"
+          ]
+        },
+        {
+          "description": "sgm_uniform",
+          "enum": [
+            "sgm_uniform"
+          ]
+        },
+        {
+          "description": "simple",
+          "enum": [
+            "simple"
+          ]
+        },
+        {
+          "description": "ddim_uniform",
+          "enum": [
+            "ddim_uniform"
+          ]
+        }
+      ],
+      "default": "karras"
+    },
+    "width": {
+      "type": "integer",
+      "description": "Width"
+    },
+    "height": {
+      "type": "integer",
+      "description": "Height"
+    },
+    "example": {
+      "type": "string",
+      "image1": "https://files.catbox.moe/kxihm6.jpg",
+      "image2": "https://files.catbox.moe/bdzw7s.png",
+      "image3": "https://fakeimg.pl/832x1216/282828/eae0d0/?text=<in%20out>#.png",
+      "image4": "https://files.catbox.moe/ab5ay0.png",
+      "widget": "example"
+    }
+  },
+  "buttons": [
+    {
+      "id": "enter",
+      "label": "🥪 Enter"
+    }
+  ]
+}
