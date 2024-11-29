@@ -15,6 +15,7 @@ https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet <br />
 https://github.com/camenduru/ComfyUI_SLK_joy_caption_two <br />
 
 ### 🖼 Output
+![Screenshot 2024-11-29 102234](https://github.com/user-attachments/assets/228d1187-1b46-48a8-80c9-3c911fb603ab)
 
 ### 🏢 Sponsor
 [https://runpod.io](https://runpod.io?ref=iqi9iy8y)
