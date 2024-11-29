@@ -63,7 +63,9 @@ RUN pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+c
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/joy-caption-alpha-two/raw/main/text_model/tokenizer.json -d /content/ComfyUI/models/Joy_caption_two/text_model -o tokenizer.json && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/joy-caption-alpha-two/raw/main/text_model/special_tokens_map.json -d /content/ComfyUI/models/Joy_caption_two/text_model -o special_tokens_map.json && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/joy-caption-alpha-two/resolve/main/text_model/adapter_model.safetensors -d /content/ComfyUI/models/Joy_caption_two/text_model -o adapter_model.safetensors && \
-    aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/joy-caption-alpha-two/raw/main/text_model/adapter_config.json -d /content/ComfyUI/models/Joy_caption_two/text_model -o adapter_config.json
+    aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/joy-caption-alpha-two/raw/main/text_model/adapter_config.json -d /content/ComfyUI/models/Joy_caption_two/text_model -o adapter_config.json && \
+    aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors -d /content/ComfyUI/models/ipadapter -o ip-adapter_sdxl_vit-h.safetensors && \
+    aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/sharing1179/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors/resolve/main/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors -d /content/ComfyUI/models/clip_vision -o CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
 
 COPY ./worker_runpod.py /content/ComfyUI/worker_runpod.py
 WORKDIR /content/ComfyUI

@@ -61,14 +61,14 @@ def generate(input):
 
     input_image = values['input_image']
     input_image = download_file(url=input_image, save_dir='/content/ComfyUI/input', file_name='input_image')
-    style_imag1 = values['style_imag1']
-    style_imag1 = download_file(url=style_imag1, save_dir='/content/ComfyUI/input', file_name='style_imag1')
-    style_imag2 = values['style_imag2']
-    style_imag2 = download_file(url=style_imag2, save_dir='/content/ComfyUI/input', file_name='style_imag2')
-    style_imag3 = values['style_imag3']
-    style_imag3 = download_file(url=style_imag3, save_dir='/content/ComfyUI/input', file_name='style_imag3')
-    style_imag4 = values['style_imag4']
-    style_imag4 = download_file(url=style_imag4, save_dir='/content/ComfyUI/input', file_name='style_imag4')
+    style_image1 = values['style_image1']
+    style_image1 = download_file(url=style_image1, save_dir='/content/ComfyUI/input', file_name='style_image1')
+    style_image2 = values['style_image2']
+    style_image2 = download_file(url=style_image2, save_dir='/content/ComfyUI/input', file_name='style_image2')
+    style_image3 = values['style_image3']
+    style_image3 = download_file(url=style_image3, save_dir='/content/ComfyUI/input', file_name='style_image3')
+    style_image4 = values['style_image4']
+    style_image4 = download_file(url=style_image4, save_dir='/content/ComfyUI/input', file_name='style_image4')
     positive_prompt = values['positive_prompt']
     negative_prompt = values['negative_prompt']
     seed = values['seed']
@@ -92,12 +92,12 @@ def generate(input):
         caption_length = values['caption_length']
         low_vram = values['low_vram']
         positive_prompt = Joy_caption_two.generate(joy_two_pipeline, input_image, caption_type, caption_length, low_vram)[0]
-    style_imag1 = LoadImage.load_image(style_imag1)[0]
-    style_imag2 = LoadImage.load_image(style_imag2)[0]
-    style_imag3 = LoadImage.load_image(style_imag3)[0]
-    style_imag4 = LoadImage.load_image(style_imag4)[0]
-    batch_image1 = ImageBatch.batch(style_imag1, style_imag2)[0]
-    batch_image2 = ImageBatch.batch(style_imag3, style_imag4)[0]
+    style_image1 = LoadImage.load_image(style_image1)[0]
+    style_image2 = LoadImage.load_image(style_image2)[0]
+    style_image3 = LoadImage.load_image(style_image3)[0]
+    style_image4 = LoadImage.load_image(style_image4)[0]
+    batch_image1 = ImageBatch.batch(style_image1, style_image2)[0]
+    batch_image2 = ImageBatch.batch(style_image3, style_image4)[0]
     batch_image3 = ImageBatch.batch(batch_image1, batch_image2)[0]
     ip_unet = AV_IPAdapter.apply_ip_adapter("ip-adapter_sdxl_vit-h.safetensors", "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors", lora_unet, batch_image3, weight=1.5, weight_type="style transfer", start_at=0, end_at=1)[0]
     canny_image = AV_ControlNetPreprocessor.detect_controlnet(input_image, preprocessor="canny", sd_version="sdxl", resolution=640, preprocessor_override="None")[0]

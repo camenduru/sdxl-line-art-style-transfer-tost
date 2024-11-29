@@ -24,106 +24,56 @@
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "input_image",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "property": "input_image"
     },
     "input_image": {
       "type": "string",
       "description": "Image URL",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "widget": "textarea"
     },
     "upload1": {
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "style_imag1",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "property": "style_image1"
     },
-    "style_imag1": {
+    "style_image1": {
       "type": "string",
-      "description": "Image URL",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "description": "Style Image 1 URL",
+      "widget": "textarea"
     },
     "upload2": {
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "style_imag2",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "property": "style_image2"
     },
-    "style_imag2": {
+    "style_image2": {
       "type": "string",
-      "description": "Image URL",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "description": "Style Image 2 URL",
+      "widget": "textarea"
     },
     "upload3": {
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "style_imag3",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "property": "style_image3"
     },
-    "style_imag3": {
+    "style_image3": {
       "type": "string",
-      "description": "Image URL",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "description": "Style Image 3 URL",
+      "widget": "textarea"
     },
     "upload4": {
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "style_imag4",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "property": "style_image4"
     },
-    "style_imag4": {
+    "style_image4": {
       "type": "string",
-      "description": "Image URL",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "description": "Style Image 4 URL",
+      "widget": "textarea"
     },
     "caption_type": {
       "type": "string",
@@ -185,12 +135,7 @@
           ]
         }
       ],
-      "default": "Descriptive",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "default": "Descriptive"
     },
     "caption_length": {
       "type": "string",
@@ -234,12 +179,7 @@
           ]
         }
       ],
-      "default": "long",
-      "visibleIf": {
-        "enable_image_caption": [
-          true
-        ]
-      }
+      "default": "long"
     },
     "low_vram": {
       "type": "boolean",
@@ -249,12 +189,7 @@
     "positive_prompt": {
       "type": "string",
       "description": "Positive Prompt",
-      "widget": "textarea",
-      "visibleIf": {
-        "enable_image_caption": [
-          false
-        ]
-      }
+      "widget": "textarea"
     },
     "negative_prompt": {
       "type": "string",
