@@ -17,5 +17,7 @@ https://github.com/camenduru/ComfyUI_SLK_joy_caption_two <br />
 ### 🖼 Output
 ![Screenshot 2024-11-29 102234](https://github.com/user-attachments/assets/228d1187-1b46-48a8-80c9-3c911fb603ab)
 
+![Screenshot 2024-11-30 053004](https://github.com/user-attachments/assets/54e33c71-5a5d-49ca-bbfb-4b29723ab885)
+
 ### 🏢 Sponsor
 [https://runpod.io](https://runpod.io?ref=iqi9iy8y)

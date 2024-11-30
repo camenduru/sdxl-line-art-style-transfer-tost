@@ -4,7 +4,7 @@
     "style_image2": "https://files.catbox.moe/59u8q5.png",
     "style_image3": "https://files.catbox.moe/ctpfk2.png",
     "style_image4": "https://files.catbox.moe/gjy7lc.png",
-    "enable_image_caption": true,
+    "enable_image_caption": false,
     "caption_type": "Booru tag list",
     "caption_length": "short",
     "low_vram": true,
