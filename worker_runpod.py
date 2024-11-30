@@ -165,15 +165,5 @@ def generate(input):
     finally:
         if os.path.exists(result):
             os.remove(result)
-        if os.path.exists(input_image):
-            os.remove(input_image)
-        if os.path.exists(style_image1):
-            os.remove(style_image1)
-        if os.path.exists(style_image2):
-            os.remove(style_image2)
-        if os.path.exists(style_image3):
-            os.remove(style_image3)
-        if os.path.exists(style_image4):
-            os.remove(style_image4)
 
 runpod.serverless.start({"handler": generate})
