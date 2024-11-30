@@ -189,7 +189,12 @@
     "positive_prompt": {
       "type": "string",
       "description": "Positive Prompt",
-      "widget": "textarea"
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          false
+        ]
+      }
     },
     "negative_prompt": {
       "type": "string",

@@ -69,7 +69,6 @@ def generate(input):
     style_image3 = download_file(url=style_image3, save_dir='/content/ComfyUI/input', file_name='style_image3')
     style_image4 = values['style_image4']
     style_image4 = download_file(url=style_image4, save_dir='/content/ComfyUI/input', file_name='style_image4')
-    positive_prompt = values['positive_prompt']
     negative_prompt = values['negative_prompt']
     seed = values['seed']
     steps = values['steps']
@@ -92,6 +91,8 @@ def generate(input):
         caption_length = values['caption_length']
         low_vram = values['low_vram']
         positive_prompt = Joy_caption_two.generate(joy_two_pipeline, input_image, caption_type, caption_length, low_vram)[0]
+    else:
+        positive_prompt = values['positive_prompt']
     style_image1 = LoadImage.load_image(style_image1)[0]
     style_image2 = LoadImage.load_image(style_image2)[0]
     style_image3 = LoadImage.load_image(style_image3)[0]
