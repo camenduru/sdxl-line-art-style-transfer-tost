@@ -12,7 +12,7 @@
       "jupyter": "https://github.com/camenduru/IPAdapter-jupyter",
       "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/sdxl-line-art-style-transfer.ipynb",
       "tags": [
-        "Text to Image"
+        "Image to Image"
       ],
       "widget": "readme"
     },
